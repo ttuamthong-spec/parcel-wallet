@@ -27,11 +27,17 @@
 <div class="card">
   <img src="apple-touch-icon.png" alt="Parcel Wallet">
   <h1>Parcel Wallet</h1>
-  <p>กำลังเปิดแอป…</p>
+  <p>CATAMIN · ระบบติดตามพัสดุและเงินล่วงหน้า</p>
   <a class="btn" href="https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec">เปิดแอป</a>
+  <div class="tip">
+    <b>เพิ่มไปหน้าโฮม</b><br>
+    iPhone: กด แชร์ ⬆︎ → เพิ่มไปยังหน้าจอโฮม<br>
+    Android: กด ⋮ → เพิ่มลงในหน้าจอหลัก
+  </div>
 </div>
 <script>
-  setTimeout(function () { location.replace('https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec'); }, 400);
+  var fromHome = (window.navigator.standalone === true) || (history.length <= 1 && !document.referrer);
+  if (fromHome) { setTimeout(function () { location.replace('https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec'); }, 400); }
 </script>
 </body>
 </html>

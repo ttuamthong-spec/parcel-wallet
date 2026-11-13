@@ -36,7 +36,8 @@
   </div>
 </div>
 <script>
-  try { history.replaceState(null, '', 'go.html'); } catch (e) {}
+  var fromHome = (window.navigator.standalone === true) || (history.length <= 1 && !document.referrer);
+  if (fromHome) { setTimeout(function () { location.replace('https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec'); }, 400); }
 </script>
 </body>
 </html>
