@@ -1,7 +1,7 @@
 {
   "name": "Parcel Wallet",
   "short_name": "Parcel Wallet",
-  "start_url": "./?go=1",
+  "start_url": "./go.html",
   "scope": "./",
   "display": "browser",
   "background_color": "#FFF4E0",
