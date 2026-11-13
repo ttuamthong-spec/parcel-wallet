@@ -1,1 +1,49 @@
-<!DOCTYPE html> <html lang="th"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> <title>Parcel Wallet</title> <meta name="apple-mobile-web-app-title" content="Parcel Wallet"> <meta name="application-name" content="Parcel Wallet"> <meta name="theme-color" content="#49C9C7"> <meta name="robots" content="noindex, nofollow"> <link rel="icon" type="image/jpeg" sizes="192x192" href="https://lh3.googleusercontent.com/d/1rkBkjOMQrfvLSEADtZ3KFzBaFikoIksT"> <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1rkBkjOMQrfvLSEADtZ3KFzBaFikoIksT"> <link rel="manifest" href="manifest.webmanifest"> <script> var APP = 'https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec'; if (/[?&]go=1/.test(location.search)) { location.replace(APP); } </script> <style> body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans Thai",system-ui,-apple-system,sans-serif;background:linear-gradient(#FFF4E0,#FFC8AC);color:#24324a} .card{max-width:420px;margin:24px;padding:28px 24px;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(190,100,70,.18);text-align:center} img{width:120px;height:120px;border-radius:28px;box-shadow:0 8px 22px rgba(190,100,70,.25)} h1{font-size:24px;margin:16px 0 4px} p{color:#5b6a80;line-height:1.6;margin:6px 0} a.btn{display:block;margin:20px 0 8px;padding:14px;border-radius:16px;background:#49C9C7;color:#fff;font-weight:700;text-decoration:none;font-size:17px} .tip{font-size:14px;text-align:left;background:#FFF7EC;border-radius:16px;padding:12px 14px;margin-top:14px} .tip b{color:#24324a} </style> </head> <body> <div class="card"> <img src="https://lh3.googleusercontent.com/d/1rkBkjOMQrfvLSEADtZ3KFzBaFikoIksT" alt="Parcel Wallet"> <h1>Parcel Wallet</h1> <p>CATAMIN · ระบบติดตามพัสดุและเงินล่วงหน้า</p> <a class="btn" id="open" href="#">เปิดแอป</a> <div class="tip"> <b>เพิ่มไปหน้าโฮม</b><br> iPhone: กด แชร์ ⬆︎ → เพิ่มไปยังหน้าจอโฮม (ปิด “เปิดเป็นแอปหน้าเว็บ”)<br> Android: กด ⋮ → เพิ่มลงในหน้าจอหลัก </div> </div> <script> document.getElementById('open').href = APP; try { history.replaceState(null, '', location.pathname + '?go=1'); } catch (e) { } </script> </body> </html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parcel Wallet</title>
+<meta name="apple-mobile-web-app-title" content="Parcel Wallet">
+<meta name="application-name" content="Parcel Wallet">
+<meta name="theme-color" content="#49C9C7">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="192x192" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script>
+  // ลิงก์แอปจริง (Google Apps Script)
+  var APP = 'https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec';
+  // เปิดจากไอคอนหน้าโฮม (?go=1) → เข้าแอปทันที
+  if (/[?&]go=1/.test(location.search)) { location.replace(APP); }
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans Thai",system-ui,-apple-system,sans-serif;background:linear-gradient(#FFF4E0,#FFC8AC);color:#24324a}
+  .card{max-width:420px;margin:24px;padding:28px 24px;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(190,100,70,.18);text-align:center}
+  img{width:120px;height:120px;border-radius:28px;box-shadow:0 8px 22px rgba(190,100,70,.25)}
+  h1{font-size:24px;margin:16px 0 4px}
+  p{color:#5b6a80;line-height:1.6;margin:6px 0}
+  a.btn{display:block;margin:20px 0 8px;padding:14px;border-radius:16px;background:#49C9C7;color:#fff;font-weight:700;text-decoration:none;font-size:17px}
+  .tip{font-size:14px;text-align:left;background:#FFF7EC;border-radius:16px;padding:12px 14px;margin-top:14px}
+  .tip b{color:#24324a}
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="apple-touch-icon.png" alt="Parcel Wallet">
+  <h1>Parcel Wallet</h1>
+  <p>CATAMIN · ระบบติดตามพัสดุและเงินล่วงหน้า</p>
+  <a class="btn" id="open" href="#">เปิดแอป</a>
+  <div class="tip">
+    <b>เพิ่มไปหน้าโฮม</b><br>
+    iPhone: กด แชร์ ⬆︎ → เพิ่มไปยังหน้าจอโฮม (ปิด “เปิดเป็นแอปหน้าเว็บ”)<br>
+    Android: กด ⋮ → เพิ่มลงในหน้าจอหลัก
+  </div>
+</div>
+<script>
+  document.getElementById('open').href = APP;
+  // ทำให้ลิงก์ที่ถูกบันทึกไปหน้าโฮมเป็น ?go=1 (เปิดแล้วเข้าแอปทันที) โดยไม่โหลดหน้าใหม่
+  try { history.replaceState(null, '', location.pathname + '?go=1'); } catch (e) {}
+</script>
+</body>
+</html>
