@@ -15,29 +15,41 @@
 <style>
   body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans Thai",system-ui,-apple-system,sans-serif;background:linear-gradient(#FFF4E0,#FFC8AC);color:#24324a}
   .card{max-width:420px;margin:24px;padding:28px 24px;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(190,100,70,.18);text-align:center}
-  img{width:120px;height:120px;border-radius:28px;box-shadow:0 8px 22px rgba(190,100,70,.25)}
-  h1{font-size:24px;margin:16px 0 4px}
+  img{width:110px;height:110px;border-radius:26px;box-shadow:0 8px 22px rgba(190,100,70,.25)}
+  h1{font-size:24px;margin:14px 0 4px}
   p{color:#5b6a80;line-height:1.6;margin:6px 0}
   a.btn{display:block;margin:20px 0 8px;padding:14px;border-radius:16px;background:#49C9C7;color:#fff;font-weight:700;text-decoration:none;font-size:17px}
-  .tip{font-size:14px;text-align:left;background:#FFF7EC;border-radius:16px;padding:12px 14px;margin-top:14px}
-  .tip b{color:#24324a}
+  ol{text-align:left;font-size:18px;line-height:1.7;margin:18px 0 6px;padding-left:26px}
+  ol b{color:#1f8f8c}
+  .note{font-size:14px;background:#FFF7EC;border-radius:14px;padding:10px 12px;margin-top:12px}
+  #launch{display:none}
 </style>
 </head>
 <body>
 <div class="card">
   <img src="apple-touch-icon.png" alt="Parcel Wallet">
   <h1>Parcel Wallet</h1>
-  <p>CATAMIN · ระบบติดตามพัสดุและเงินล่วงหน้า</p>
-  <a class="btn" href="https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec">เปิดแอป</a>
-  <div class="tip">
-    <b>เพิ่มไปหน้าโฮม</b><br>
-    iPhone: กด แชร์ ⬆︎ → เพิ่มไปยังหน้าจอโฮม<br>
-    Android: กด ⋮ → เพิ่มลงในหน้าจอหลัก
+  <div id="setup">
+    <p>เพิ่มไอคอนไปหน้าโฮม 3 ขั้นตอน</p>
+    <ol>
+      <li>กดปุ่ม <b>แชร์ ⬆︎</b> ที่แถบที่อยู่ (Android: กด <b>⋮</b>)</li>
+      <li>เลือก <b>เพิ่มไปยังหน้าจอโฮม</b></li>
+      <li>กด <b>เพิ่ม</b></li>
+    </ol>
+    <div class="note">ทำจากหน้านี้เลย ไม่ต้องกดอะไรอื่นก่อน — กดไอคอนบนหน้าโฮมแล้วจะเข้าแอปเอง</div>
+  </div>
+  <div id="launch">
+    <p>กำลังเปิดแอป…</p>
+    <a class="btn" href="https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec">เปิดแอป</a>
   </div>
 </div>
 <script>
   var fromHome = (window.navigator.standalone === true) || (history.length <= 1 && !document.referrer);
-  if (fromHome) { setTimeout(function () { location.replace('https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec'); }, 400); }
+  if (fromHome) {
+    document.getElementById('setup').style.display = 'none';
+    document.getElementById('launch').style.display = 'block';
+    setTimeout(function () { location.replace('https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec'); }, 400);
+  }
 </script>
 </body>
 </html>
