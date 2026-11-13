@@ -9,13 +9,11 @@
 <meta name="theme-color" content="#49C9C7">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" sizes="192x192" href="apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="pw-icon-180.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="pw-icon-180.png">
 <link rel="manifest" href="manifest.webmanifest">
 <script>
-  // ลิงก์แอปจริง (Google Apps Script)
   var APP = 'https://script.google.com/macros/s/AKfycbzhCHc5mZ-rNZjN3FCyIQeXXHwpqGX7M-1h0v-Z_qAGYRv0e1gHfNDq49ELoUiXxy2U/exec';
-  // เปิดจากไอคอนหน้าโฮม (?go=1) → เข้าแอปทันที
-  if (/[?&]go=1/.test(location.search)) { location.replace(APP); }
 </script>
 <style>
   body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans Thai",system-ui,-apple-system,sans-serif;background:linear-gradient(#FFF4E0,#FFC8AC);color:#24324a}
@@ -42,7 +40,7 @@
 </div>
 <script>
   document.getElementById('open').href = APP;
-  // ทำให้ลิงก์ที่ถูกบันทึกไปหน้าโฮมเป็น ?go=1 (เปิดแล้วเข้าแอปทันที) โดยไม่โหลดหน้าใหม่
+  if (/[?&]go=1/.test(location.search)) { setTimeout(function () { location.replace(APP); }, 700); }
   try { history.replaceState(null, '', location.pathname + '?go=1'); } catch (e) {}
 </script>
 </body>
